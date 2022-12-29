@@ -1,0 +1,37 @@
+@import "./variable";
+
+.text-tsm {font-size: 8px !important;}
+.text-xsm {font-size: 10px !important;}
+.text-sm {font-size: 12px !important;}
+.text-md {font-size: 14px !important;}
+.text-lg {font-size: 16px !important;}
+.text-xlg {font-size: 20px !important;}
+.text-tlg {font-size: 24px !important;}
+
+.fw4 {font-weight: 400 !important;}
+.fw5 {font-weight: 500 !important;}
+.fw6 {font-weight: 600 !important;}
+.fw7 {font-weight: 700 !important;}
+
+.text-color-primary {color: $colorPrimary !important;}
+.text-color-secondary {color: $colorSecondary !important;}
+.text-color-tertiary {color: $colorTertiary !important;}
+.text-color-default {color: $colorDefault !important;}
+.text-color-danger {color: $colorDanger !important;}
+
+.text-neutral-20 {color: $colorNetral20;}
+.text-neutral-30 {color: $colorNetral30;}
+.text-neutral-40 {color: $colorNetral40;}
+.text-neutral-50 {color: $colorNetral50;}
+.text-neutral-60 {color: $colorNetral60;}
+.text-neutral-70 {color: $colorNetral70;}
+.text-neutral-80 {color: $colorNetral80;}
+.text-neutral-90 {color: $colorNetral90;}
+
+h1 {font-size: 54px !important;}
+h2 {font-size: 48px !important;}
+h3 {font-size: 44px !important;}
+h4 {font-size: 40px !important;}
+h5 {font-size: 36px !important;}
+h6 {font-size: 32px !important;}
+h7 {font-size: 28px !important;}

@@ -1,0 +1,50 @@
+.form-control {
+  font-size: 14px;
+  border-radius: 8px;
+  border: solid 1px $colorNetral30;
+  color: $colorDefault;
+  &.form-control-lg {
+    padding: 18.5px 20px;
+  }
+  &:focus {
+    border-color: $colorPrimary;
+    box-shadow: none;
+    outline: none;
+  }
+  &::placeholder {
+    color: $colorNetral50;
+  }
+}
+.input-group {
+  .form-control {
+    border-right: 0;
+  }
+  .input-group-text {
+    font-size: 21px;
+    color: $colorNetral50;
+    background: transparent;
+  }
+}
+.form-check {
+  min-height: auto;
+  padding-left: 30px;
+  margin-bottom: 0;
+  .form-check-input {
+    margin-left: -30px;
+    margin-top: 0;
+    width: 20px;
+    height: 20px;
+    &[type="checkbox"] {
+      border-radius: 4px;
+    }
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+      border-color: $colorPrimary;
+    }
+    &:checked {
+      background-color: $colorPrimary;
+      border-color: $colorPrimary;
+    }
+  }
+}

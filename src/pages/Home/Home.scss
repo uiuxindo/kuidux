@@ -1,0 +1,175 @@
+@import "../../assets/css/variable";
+
+.home-search {
+  .card {
+    padding: 10px 10px 10px 30px;
+    border-radius: 50px;
+    border: 0;
+    box-shadow: 3px 13px 42px #00000017;
+    svg {
+      flex: 0 0 24px;
+    }
+    .form-control {
+      font-size: 14px;
+      color: $colorDefault;
+      padding-top: 19.5px;
+      padding-bottom: 19.5px;
+      border-radius: 0;
+      border: 0;
+      &::placeholder {
+        color: $colorNetral50;
+      }
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+    .dropdown {
+      height: 60px;
+      .dropdown-toggle {
+        font-weight: 400 !important;
+        border-radius: 0 !important;
+        background-color: $colorWhite;
+        border: 0;
+        padding: 0 20px;
+        color: $colorDefault;
+        height: 100%;
+        width: 183px;
+        border-left: solid .5px $colorNetral50;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &::after {
+          display: none;
+        }
+        &:hover {
+          filter: brightness(1) !important;
+        }
+      }
+      .dropdown-menu {
+        border: 0;
+        box-shadow: 1px -2px 20px #0000000d;
+        width: 100%;
+        .dropdown-item {
+          font-size: 14px;
+          color: $colorDefault;
+          padding: 10px 20px;
+          &.active {
+            background-color: $colorWhite;
+            color: $colorPrimary;
+          }
+        }
+      }
+    }
+    .btn-main-search {
+      font-size: 16px !important;
+      font-weight: 500 !important;
+      color: $colorWhite;
+      padding: 18px 37px !important;
+      border: 0;
+      border-radius: 30px !important;
+      background: linear-gradient(45deg, #FE9B26, #6EBBDC);
+    }
+  }
+}
+
+.text-banner {
+  span {
+    &::before {
+      content: "freelancer";
+      color: $colorPrimary;
+      animation: text-change 5s infinite;
+      -webkit-animation: text-change 5s infinite;
+      -moz-animation: text-change 5s infinite;
+      -o-animation: text-change 5s infinite;
+      -ms-animation: text-change 5s infinite;
+    }
+  }
+}
+
+@-webkit-keyframes text-change {
+  0% {
+    content: "freelancer";
+    color: $colorPrimary;
+  }
+  30% {
+    content: "freelancer";
+    color: $colorPrimary;
+  }
+  60% {
+    content: "full worker";
+    color: $colorSecondary;
+  }
+  100% {
+    content: "mentor";
+    color: $colorTertiary;
+  }
+}
+@-moz-keyframes text-change {
+  0% {
+    content: "freelancer";
+    color: $colorPrimary;
+  }
+  30% {
+    content: "freelancer";
+    color: $colorPrimary;
+  }
+  60% {
+    content: "full worker";
+    color: $colorSecondary;
+  }
+  100% {
+    content: "mentor";
+    color: $colorTertiary;
+  }
+}
+@-ms-keyframes text-change {
+  0% {
+    content: "freelancer";
+    color: $colorPrimary;
+  }
+  30% {
+    content: "freelancer";
+    color: $colorPrimary;
+  }
+  60% {
+    content: "full worker";
+    color: $colorSecondary;
+  }
+  100% {
+    content: "mentor";
+    color: $colorTertiary;
+  }
+}
+@-o-keyframes text-change {
+  0% {
+    content: "freelancer";
+    color: $colorPrimary;
+  }
+  30% {
+    content: "freelancer";
+    color: $colorPrimary;
+  }
+  60% {
+    content: "full worker";
+    color: $colorSecondary;
+  }
+  100% {
+    content: "mentor";
+    color: $colorTertiary;
+  }
+}
+@keyframes text-change {
+  30% {
+    content: "freelancer";
+    color: $colorPrimary;
+  }
+  60% {
+    content: "full worker";
+    color: $colorSecondary;
+  }
+  100% {
+    content: "mentor";
+    color: $colorTertiary;
+  }
+}

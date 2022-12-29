@@ -1,0 +1,41 @@
+@import "../../assets/css/variable";
+
+main-footer {
+  background-color: $colorNetral20;
+  display: block;
+  .top-side {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    .logo {
+      height: 40px;
+    }
+  }
+  .bottom-side {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: solid 1px $colorNetral30;
+  }
+  .social-media-list {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    li {
+      width: 36px;
+      height: 36px;
+      padding: 6px;
+      border: solid 2px $colorDefault;
+      border-radius: 50%;
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

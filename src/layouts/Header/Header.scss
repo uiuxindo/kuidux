@@ -1,0 +1,110 @@
+@import "../../assets/css/variable";
+@import "../../assets/css/button";
+@import "../../assets/css/typography";
+
+main-header {
+  padding: 10px 20px;
+  border-bottom: solid 1px $colorNetral30;
+  background-color: $colorWhite;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  .logo {
+    height: 36px;
+  }
+  .menu-header {
+    display: flex;
+    align-items: center;
+    .user-access {
+      padding-left: 30px;
+      a {
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+      .dropdown {
+        .dropdown-toggle {
+          background-color: $colorWhite;
+          border: 0;
+          color: $colorDefault;
+          font-size: 14px !important;
+          font-weight: 500 !important;
+          display: flex;
+          align-items: center;
+          img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+          }
+          div {
+            flex: 0 0 98px;
+            width: 98px;
+            margin: 0 8px;
+            white-space: normal;
+            text-align: left;
+            overflow: hidden;
+            height: 21px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+          }
+          &::after {
+            display: none;
+          }
+        }
+        .dropdown-menu {
+          border: 0;
+          box-shadow: 1px -2px 20px #0000000d;
+          width: 100%;
+          .dropdown-item {
+            font-size: 14px;
+            color: $colorDefault;
+            padding: 10px 20px;
+            &.active {
+              background-color: $colorWhite;
+              color: $colorPrimary;
+            }
+          }
+        }
+      }
+    }
+    .notif-group {
+      margin-left: 12px;
+      padding-right: 30px;
+      border-right: solid 1px $colorNetral30;
+      a {
+        margin-left: 20px;
+        position: relative;
+        &:first-child {
+          margin-left: 0;
+        }
+        &.active {
+          &::before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: $colorDanger;
+            border-radius: 50%;
+            right: 0;
+            z-index: 3;
+          }
+        }
+        .btn {
+          padding: 3px 8px !important;
+          background-color: $colorNetral20;
+          font-size: 20px !important;
+          border-radius: 50% !important;
+          border: 0;
+          color: $colorDefault;
+        }
+      }
+    }
+  }
+}

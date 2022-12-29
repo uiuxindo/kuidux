@@ -1,0 +1,9 @@
+@import "./assets/css/variable";
+
+body {
+  margin: 0;
+  font-family: $defaultFont;
+  font-size: $defaulFontSize;
+  color: $defaultTextColor;
+  font-weight: $defaulFontWeight;
+}

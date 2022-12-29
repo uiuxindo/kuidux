@@ -1,0 +1,77 @@
+@import "./variable";
+
+.btn {
+  border-radius: 8px 8px 8px 8px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+  &.btn-primary {
+    background-color: $colorPrimary;
+    border-color: $colorPrimary;
+    color: $colorWhite;
+    &:hover {
+      background-color: $colorPrimary;
+      color: $colorWhite;
+      border-color: $colorPrimary;
+    }
+  }
+  &.btn-outline-primary {
+    border-color: $colorPrimary;
+    color: $colorPrimary;
+    &:hover {
+      border-color: $colorPrimary;
+      color: $colorWhite;
+      background-color: $colorPrimary;
+    }
+  }
+  &.btn-secondary {
+    background-color: $colorSecondary;
+    border-color: $colorSecondary;
+    color: $colorWhite;
+    &:hover {
+      background-color: $colorSecondary;
+      color: $colorWhite;
+      border-color: $colorSecondary;
+    }
+  }
+  &.btn-tertiary {
+    background-color: $colorTertiary;
+    border-color: $colorTertiary;
+    color: $colorWhite;
+    &:hover {
+      background-color: $colorTertiary;
+      color: $colorWhite;
+      border-color: $colorTertiary;
+    }
+  }
+  &.btn-default {
+    background-color: $colorDefault;
+    color: $colorWhite;
+    &:hover {
+      background-color: $colorDefault;
+      color: $colorWhite;
+      border-color: $colorDefault;
+    }
+  }
+
+  &.btn-sm {
+    font-size: 12px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+  &.btn-lg {
+    font-size: 14px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  &.btn-xlg {
+    font-size: 16px !important;
+    padding-top: 17px !important;
+    padding-bottom: 17px !important;
+  }
+
+  &:hover {
+    filter: brightness(0.9) !important;
+  }
+}
