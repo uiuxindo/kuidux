@@ -14,6 +14,15 @@
     &:last-child {
       margin-bottom: 30px;
     }
+    .input-group {
+      .input-group-text {
+        background: transparent;
+        .btn {
+          font-size: 21px !important;
+          color: $colorNetral50;
+        }
+      }
+    }
   }
 }
 .formDivider {
@@ -21,8 +30,9 @@
   color: $colorNetral50;
   position: relative;
   margin: 20px 0;
-  &::before, &::after {
-    content: '';
+  &::before,
+  &::after {
+    content: "";
     width: 40%;
     height: 1px;
     border-top: solid 1px $colorNetral40;
@@ -38,7 +48,8 @@
 }
 .btn-ic-media {
   position: relative;
-  img, svg {
+  img,
+  svg {
     font-size: 20px;
     height: 20px;
     position: absolute;
@@ -47,7 +58,7 @@
     transform: translateY(-10px);
   }
   &.linkedin {
-    background-color: #0277B5;
+    background-color: #0277b5;
     color: $colorWhite;
     margin-bottom: 30px;
   }

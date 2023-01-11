@@ -7,3 +7,10 @@ body {
   color: $defaultTextColor;
   font-weight: $defaulFontWeight;
 }
+
+.bg-default {
+  background-color: $colorNetral20 !important;
+}
+.bg-tertiary {
+  background-color: $colorTertiary !important;
+}

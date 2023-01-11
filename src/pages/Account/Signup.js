@@ -1,12 +1,33 @@
+import React, { useState } from "react";
 import { Container, Row, Col, Button, Form, InputGroup } from "react-bootstrap";
-import { ArrowRightCircle, EyeSlash, Linkedin } from "react-bootstrap-icons";
+import {
+  ArrowRightCircle,
+  EyeSlash,
+  Eye,
+  Linkedin,
+} from "react-bootstrap-icons";
+import Header from "../../layouts/Header";
 import GoogleIconColor from "../../assets/icon/google_color.svg";
 
 import "./Account.scss";
 
 function Signup() {
+  const [passwordType, setPasswordType] = useState("password");
+  const [passwordInput, setPasswordInput] = useState("");
+  const handlePasswordChange = (evnt) => {
+    setPasswordInput(evnt.target.value);
+  };
+  const togglePassword = () => {
+    if (passwordType === "password") {
+      setPasswordType("text");
+      return;
+    }
+    setPasswordType("password");
+  };
+
   return (
     <>
+      <Header state="default" />
       <Container fluid>
         <Row>
           <Col lg={4} className="pageBackground">
@@ -52,12 +73,17 @@ function Signup() {
                     </Form.Label>
                     <InputGroup>
                       <Form.Control
-                        type="password"
+                        type={passwordType}
+                        onChange={handlePasswordChange}
+                        value={passwordInput}
+                        name="password"
                         placeholder="Create your password"
                         size="lg"
                       />
                       <InputGroup.Text>
-                        <EyeSlash />
+                        <Button variant="link p-0" onClick={togglePassword}>
+                          {passwordType === "password" ? <EyeSlash /> : <Eye />}
+                        </Button>
                       </InputGroup.Text>
                     </InputGroup>
                     <Form.Text className="text-color-danger text-sm d-none">

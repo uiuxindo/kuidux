@@ -1,5 +1,11 @@
 import { Button, Dropdown } from "react-bootstrap";
-import { Heart, ChatLeft, Bell, ChevronDown } from "react-bootstrap-icons";
+import {
+  Heart,
+  ChatLeft,
+  Bell,
+  ChevronDown,
+  List,
+} from "react-bootstrap-icons";
 
 import "./Header.scss";
 import MainLogo from "../../assets/img/publish.png";
@@ -12,7 +18,7 @@ function Header(props) {
           <a href="/">
             <img src={MainLogo} className="logo" alt="kuidux" />
           </a>
-          <div className="menu-header">
+          <div className="menu-header d-none d-sm-none d-md-flex">
             <a href="/agent-list">
               <Button variant="link text-decoration-none text-color-default">
                 Find Agent
@@ -36,6 +42,11 @@ function Header(props) {
               </a>
             </div>
           </div>
+          <div className="d-md-none">
+            <Button variant="link text-xlg p-0 text-color-default">
+              <List />
+            </Button>
+          </div>
         </main-header>
       </>
     );
@@ -46,7 +57,7 @@ function Header(props) {
           <a href="/">
             <img src={MainLogo} className="logo" alt="kuidux" />
           </a>
-          <div className="menu-header">
+          <div className="menu-header d-none d-sm-none d-md-flex">
             <a href="/agent-list">
               <Button variant="link text-decoration-none text-color-default">
                 Find Agent
@@ -91,6 +102,11 @@ function Header(props) {
                 </Dropdown.Menu>
               </Dropdown>
             </div>
+          </div>
+          <div className="d-md-none">
+            <Button variant="link text-xlg p-0 text-color-default">
+              <List />
+            </Button>
           </div>
         </main-header>
       </>

@@ -18,11 +18,9 @@
 .input-group {
   .form-control {
     border-right: 0;
-  }
-  .input-group-text {
-    font-size: 21px;
-    color: $colorNetral50;
-    background: transparent;
+    &:focus ~ .input-group-text {
+      border-color: $colorPrimary;
+    }
   }
 }
 .form-check {

@@ -1,12 +1,33 @@
+import React, { useState } from "react";
 import { Container, Row, Col, Button, Form, InputGroup } from "react-bootstrap";
-import { ArrowRightCircle, EyeSlash, Linkedin } from "react-bootstrap-icons";
+import {
+  ArrowRightCircle,
+  EyeSlash,
+  Eye,
+  Linkedin,
+} from "react-bootstrap-icons";
+import Header from "../../layouts/Header";
 import GoogleIconColor from "../../assets/icon/google_color.svg";
 
 import "./Account.scss";
 
 function Login() {
+  const [passwordType, setPasswordType] = useState("password");
+  const [passwordInput, setPasswordInput] = useState("");
+  const handlePasswordChange = (evnt) => {
+    setPasswordInput(evnt.target.value);
+  };
+  const togglePassword = () => {
+    if (passwordType === "password") {
+      setPasswordType("text");
+      return;
+    }
+    setPasswordType("password");
+  };
+
   return (
     <>
+      <Header state="default" /> {/* state="default" before login, else login */}
       <Container fluid>
         <Row>
           <Col lg={4} className="pageBackground">
@@ -53,12 +74,17 @@ function Login() {
                     <Form.Label className="text-lg fw5">Password</Form.Label>
                     <InputGroup>
                       <Form.Control
-                        type="password"
-                        placeholder="Your password"
+                        type={passwordType}
+                        onChange={handlePasswordChange}
+                        value={passwordInput}
+                        name="password"
+                        placeholder="Create your password"
                         size="lg"
                       />
                       <InputGroup.Text>
-                        <EyeSlash />
+                        <Button variant="link p-0" onClick={togglePassword}>
+                          {passwordType === "password" ? <EyeSlash /> : <Eye />}
+                        </Button>
                       </InputGroup.Text>
                     </InputGroup>
                     <Form.Text className="text-color-danger text-sm d-none">
@@ -66,18 +92,18 @@ function Login() {
                     </Form.Text>
                   </Form.Group>
                   <div className="d-flex align-items-center justify-content-between mb-4">
-                    <Form>
-                      {["checkbox"].map((type) => (
-                        <div key={`default-${type}`} className="">
-                          <Form.Check
-                            type={type}
-                            id={`default-${type}`}
-                            label={`Remember me`}
-                          />
-                        </div>
-                      ))}
-                    </Form>
-                    <a href="" className="text-color-primary">Forgot password?</a>
+                    {["checkbox"].map((type) => (
+                      <div key={`default-${type}`} className="">
+                        <Form.Check
+                          type={type}
+                          id={`default-${type}`}
+                          label={`Remember me`}
+                        />
+                      </div>
+                    ))}
+                    <a href="" className="text-color-primary">
+                      Forgot password?
+                    </a>
                   </div>
                   <Button variant="primary btn-xlg w-100 shadow-lg mt-2">
                     Log in
