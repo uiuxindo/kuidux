@@ -29,6 +29,11 @@ function Header(props) {
                 Become Agent
               </Button>
             </a>
+            <a href="https://www.academy.uiuxindo.id/" target="_blank">
+              <Button variant="link text-decoration-none text-color-default">
+                Find Mentor
+              </Button>
+            </a>
             <div className="user-access">
               <a href="/login">
                 <Button variant="outline-primary px-4" size="lg">

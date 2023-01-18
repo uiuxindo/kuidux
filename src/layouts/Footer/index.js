@@ -166,13 +166,13 @@ function Footer(props) {
                         <span className="text-neutral-90">Part of</span>
                         <img
                           src={UIUXIndoLogo}
-                          className="ms-2"
+                          className="ms-3"
                           style={{ height: "40px" }}
                         />
                         <img
-                          src={UIUXIndoAcademyLogo}
-                          className="ms-2"
-                          style={{ height: "40px" }}
+                          src="https://uiuxindo.vercel.app/assets/img/logo/main-logo.svg"
+                          className="ms-3"
+                          style={{ height: "32px" }}
                         />
                       </div>
                     </Col>
